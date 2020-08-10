@@ -2,9 +2,64 @@
 
 {% block content %}
 
-<div class="starter-template">
-    <h1>Pasim Online</h1>
-
+<div class="row topbar">
+    <div>
+        <h2>Pasim Online: a time-predictable processor interactive simulation</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 editor">
+        <div class="row">
+            <nav>
+                <button class="btn" id="buildBtn">
+                    <i class="fa fa-wrench"></i>
+                    Make
+                </button>
+                <button class="btn" id="playBtn">
+                    <i class="fa fa-play"></i>
+                    Play
+                </button>
+                <button class="btn" id="stopBtn">
+                    <i class="fa fa-stop"></i>
+                    Stop
+                </button>
+                <button class="btn" id="wcetBtn">
+                    <i class="fa fa-clock-o"></i>
+                    WCET
+                </button>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="card editor">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">main.c</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <form class="card-text">
+                        <textarea id="codeEditor"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card console">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Console</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <textarea class="console" contenteditable="false" id="consoleArea"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
