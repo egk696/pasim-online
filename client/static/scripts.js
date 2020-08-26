@@ -34,6 +34,19 @@ $('#buildBtn').click(function () {
 
 $('#playBtn').click(function () {
     console.log("pasim simulation starting...");
+    const formData = new FormData();
+    formData.append('code', editorArea.value);
+    $.ajax({
+        url: '/run',
+        data: formData,
+        method: 'POST',
+        processData: false,  // tell jQuery not to process the data
+        contentType: false,  // tell jQuery not to set contentType
+    }).done((res) => {
+        console.log(res.data.stdout)
+    }).fail((err) => {
+        console.log(err)
+    });
 });
 
 $('#stopBtn').click(function () {
